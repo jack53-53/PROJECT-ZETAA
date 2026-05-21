@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,4 +9,20 @@ public class FaladorScript : MonoBehaviour
     public string ConversaDialogo;
     public int FimConversa;
     public string NomeFalador;
+    private PlayerScript ps;
+    private GameObject p;
+
+    // public GameObject Pai;
+
+    // void Start()
+    // {
+    //     // Pai = this.GameObject();
+    //     p = GameObject.FindGameObjectWithTag("Player");
+    //     ps = p.GetComponent<PlayerScript>();
+    // }
+
+    // public void CarregarCena(string NomeCena)
+    // {
+    //     ps.LoadScene(NomeCena);
+    // }
 }

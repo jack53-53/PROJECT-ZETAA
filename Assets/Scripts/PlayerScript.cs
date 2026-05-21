@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Threading;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -35,6 +37,7 @@ public class PlayerScript : MonoBehaviour
     private bool Pulou;
     public Image img;
     public TextMeshProUGUI TextoDicas;
+    public Animator TransitionAnim;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -152,6 +155,15 @@ public class PlayerScript : MonoBehaviour
             Pulou = true;
         }
     }
+
+    // public IEnumerator LoadScene(string NomeCena)
+    // {
+    //     TransitionAnim.SetTrigger("End");
+    //     yield return new WaitForSeconds(1);
+    //     //esperar a animaçao terminar pra ir pro proximo nivel
+    //     SceneManager.LoadScene(NomeCena);
+    //     TransitionAnim.SetTrigger("Start");
+    // }
 
     //void OnFire(InputValue e)
     //{

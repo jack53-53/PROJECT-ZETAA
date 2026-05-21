@@ -19,14 +19,14 @@ public class VasoDialogo : FaladorScript
         {
             case 0:
                 NomeFalador = "Vaso: ";
-                ConversaDialogo = "Foi isto que matou o wooble?";
+                ConversaDialogo = "O tijolo provavelmente caiu daqui de dentro.";
                 N = true;
                 break;
         }
         if (N && a == 0)
         {
             a = 1;
-            ds.TextoDicas += "\nVaso que atingiu a cabeça do gatinho";
+            ds.TextoDicas += "\nVaso parecia esconder algo";
         }
 
     }
