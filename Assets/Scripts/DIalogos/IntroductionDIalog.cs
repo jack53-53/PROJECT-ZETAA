@@ -11,7 +11,7 @@ public class IntroductionDIalog : FaladorScript
         switch (ConversaEstagio)
         {
             case 0:
-                NomeFalador = "";
+                NomeFalador = "Detetive T.C";
                 ConversaDialogo = "to aqui vendo pq o gato morreu";
                 break;
             case 1:

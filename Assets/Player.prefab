@@ -267,13 +267,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dfea6209f0f14c458a93cedb7d3a177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Vel: 2
+  Vel: 5
   Sens: 20
   Camera: {fileID: 2522431639647308902}
-  MaxInteracDistance: 0
+  MaxInteracDistance: 50
   Conversando: 0
   txt: {fileID: 0}
-  fs: {fileID: 0}
+  NomeFalador: {fileID: 0}
+  MCoolDownConversa: 0.3
 --- !u!114 &6690651375807268952
 MonoBehaviour:
   m_ObjectHideFlags: 0
