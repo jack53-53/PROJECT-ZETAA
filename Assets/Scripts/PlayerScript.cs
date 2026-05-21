@@ -3,6 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -26,13 +27,30 @@ public class PlayerScript : MonoBehaviour
     private FaladorScript fs;
     private float CoolDownConversa;
     public float MCoolDownConversa;
+    private GameObject go;
+    private DATASCRIPT ds;
+    private float Volume;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        go = GameObject.FindGameObjectWithTag("DATA");
+        if (go != null)
+        {
+            ds = go.GetComponent<DATASCRIPT>();
+            Sens = ds.SensSaved;
+            Volume = ds.SoundSaved;
+        }
         rb = GetComponent<Rigidbody>();
         LayerInteractables = LayerMask.GetMask("Interagivel");
+        //LayerAtiravel = LayerMask.GetMask("Atiravel");
         Mvel = Vel;
         Msens = Sens;
+        //DicaTxt.text = "";
+        if(SceneManager.GetActiveScene().name == "Introducao")
+        {
+            Interagiu = true;
+        }
     }
 
     private void FixedUpdate()
@@ -50,7 +68,7 @@ public class PlayerScript : MonoBehaviour
                 fs.ConversaEstagio++;
                 Interagiu = false;
             }
-            if(fs.FimConversa == fs.ConversaEstagio)
+            if (fs.FimConversa == fs.ConversaEstagio)
             {
                 Conversando = false;
                 txt.text = "";
@@ -68,7 +86,7 @@ public class PlayerScript : MonoBehaviour
             RaycastHit Atingido;
             Interagiu = false;
             Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Atingido, MaxInteracDistance, LayerInteractables);
-            if(Atingido.transform != null)
+            if (Atingido.transform != null)
             {
                 gb = Atingido.transform.gameObject;//so vai acertar os que estao na layer certa 
                 Conversando = true;
@@ -76,7 +94,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         Vector3 moveDirection = transform.forward * Movement.y + transform.right * Movement.x;
-        rb.linearVelocity = new Vector3(moveDirection.x * Vel,rb.linearVelocity.y,moveDirection.z * Vel);
+        rb.linearVelocity = new Vector3(moveDirection.x * Vel, rb.linearVelocity.y, moveDirection.z * Vel);
 
         xRotation -= Olhamento.y * Sens;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
@@ -99,10 +117,19 @@ public class PlayerScript : MonoBehaviour
 
     void OnInteract(InputValue e)
     {
-        if(CoolDownConversa <= 0 && e.isPressed)
+        if (CoolDownConversa <= 0 && e.isPressed)
         {
             Interagiu = true;
             CoolDownConversa = MCoolDownConversa;
         }
     }
+
+    //void OnFire(InputValue e)
+    //{
+    //    if (CoolDownConversa <= 0 && e.isPressed)
+    //    {
+    //        Atirou = true;
+    //        CoolDownConversa = MCoolDownConversa;
+    //    }
+    //}
 }

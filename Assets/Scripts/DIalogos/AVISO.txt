@@ -1,0 +1,19 @@
+esse sistema é puro espaguetti, o código ta beeem confuso, e pra um jogo aonde dialogo importa tanto, esse sistema demora muito
+pra criar um personagem aonde voce consegue conversar vc tem que fazer isso:
+1. criar um script (EX: MarianaDialogoScript)
+2. fazer o script heardar do faladorScript
+3. criar um switch case dentro do update na variavel ConversaEstagio
+4. Dentro de cada case, voce tem que definir quem disse oq e oq ele disse, assim:
+
+            case 0: //primeiro dialogo com o personagem depois de interagir
+                NomeFalador = "FELLIPE";
+                ConversaDialogo = "O TEXTO VAI IR AQUI";
+                break;
+            case 1: //segundo dialogo depois de continuar o ultimo dialogo
+                NomeFalado = "y/n";
+                ConversaDialogo = "definitivamente um dos momentos de todos os tempos";
+
+e assim vai, seguindo todos os outros
+
+(talvez n precise)
+colocar a layer "interagivel" no gameobject
