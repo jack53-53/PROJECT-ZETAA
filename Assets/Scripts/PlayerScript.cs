@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class PlayerScript : MonoBehaviour
     private GameObject go;
     private DATASCRIPT ds;
     private float Volume;
+    private bool Inventario;
+    private bool Pulou;
+    public Image img;
+    public TextMeshProUGUI TextoDicas;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -55,6 +60,22 @@ public class PlayerScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Pulou)
+        {
+            Pulou = false;
+            Inventario = !Inventario;
+        }
+        if (Inventario) 
+        {
+            img.enabled = true;
+            TextoDicas.text = ds.TextoDicas;
+            rb.linearVelocity = Vector3.zero;
+        }
+        else if (!Inventario)
+        {
+            img.enabled = false;
+            TextoDicas.text = "";
+        }
         if (Conversando)
         {
             Vel = 0;
@@ -121,6 +142,14 @@ public class PlayerScript : MonoBehaviour
         {
             Interagiu = true;
             CoolDownConversa = MCoolDownConversa;
+        }
+    }
+
+    void OnJump(InputValue e)
+    {
+        if (e.isPressed)
+        {
+            Pulou = true;
         }
     }
 

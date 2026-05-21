@@ -25,7 +25,6 @@ public class SettingsScript : MonoBehaviour
     private void Start()
     {
         MCooldown = Cooldown;
-        Instantiate(DATA);
         go = GameObject.FindGameObjectWithTag("DATA");
         ds = go.GetComponent<DATASCRIPT>();
     }

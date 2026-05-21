@@ -9,13 +9,24 @@ public class MenuManagerScript : MonoBehaviour
     private bool Escolheu;
     private Vector2 Mov;
     public int Limite;
+    public GameObject DATA;
+    private GameObject d;
+
+    private void Start()
+    {
+        d = GameObject.FindGameObjectWithTag("DATA");
+        if (d == null)
+        {
+            Instantiate(DATA);
+        }
+    }
     private void Update()
     {
         if (Escolheu)
         {
             if (Opcao == 0)
             {
-                SceneManager.LoadScene("DevRoom");
+                SceneManager.LoadScene("Introducao");
             }
             else if (Opcao == 1)
             {

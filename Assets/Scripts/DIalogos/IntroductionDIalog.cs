@@ -11,12 +11,12 @@ public class IntroductionDIalog : FaladorScript
         switch (ConversaEstagio)
         {
             case 0:
-                NomeFalador = "Detetive T.C";
-                ConversaDialogo = "to aqui vendo pq o gato morreu";
+                NomeFalador = "";
+                ConversaDialogo = "Sou do Detective S.C. (small claims) e foi-me atribuído um novo caso: A morte de Wooble, o gatinho laranja da Lady Donna.";
                 break;
             case 1:
                 NomeFalador = "";
-                ConversaDialogo = "tenho que ir interrogar os outros entrando dentro das memorias deles";
+                ConversaDialogo = "Recentemente descobriu-se uma nova tecnologia em que é possível navegar pelas memórias, desenvolvida por engenheiros forenses para investigar crimes através de circunstantes. Vou me reunir com 4 testemunhas e investigar as suas memórias.";
                 break;
             case 2:
                 SceneManager.LoadScene("Nivel1");
