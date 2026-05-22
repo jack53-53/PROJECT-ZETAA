@@ -14,18 +14,18 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.184
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
+  m_AmbientEquatorColor: {r: 0, g: 0.5999999, b: 1, a: 1}
+  m_AmbientGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -93,8 +93,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: c0e67230bc3bd3949a35d722aab89b3f, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: e507922967dba8d48aeeca6b35b6ac49, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -688,60 +688,15 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 820c5e09e62fdc542b9ff34eb0ddb2d9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 683160256}
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 820c5e09e62fdc542b9ff34eb0ddb2d9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 683160258}
-    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 820c5e09e62fdc542b9ff34eb0ddb2d9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 683160257}
   m_SourcePrefab: {fileID: 100100000, guid: 820c5e09e62fdc542b9ff34eb0ddb2d9, type: 3}
---- !u!1 &683160254 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 820c5e09e62fdc542b9ff34eb0ddb2d9, type: 3}
-  m_PrefabInstance: {fileID: 683160253}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &683160255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 820c5e09e62fdc542b9ff34eb0ddb2d9, type: 3}
   m_PrefabInstance: {fileID: 683160253}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &683160256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683160254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 649adb0e08897ba4c8ec75e4febc703e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Poltrona
-  ConversaEstagio: 0
-  ConversaDialogo: 
-  FimConversa: 1
-  NomeFalador: 
-  Tocou: 0
---- !u!114 &683160257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683160255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 649adb0e08897ba4c8ec75e4febc703e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Poltrona
-  ConversaEstagio: 0
-  ConversaDialogo: 
-  FimConversa: 1
-  NomeFalador: 
-  Tocou: 0
 --- !u!65 &683160258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1235,9 +1190,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -4403544536768301438, guid: d88f0dd509b67f547a803986bd281a67, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1894731182}
-    - targetCorrespondingSourceObject: {fileID: -4403544536768301438, guid: d88f0dd509b67f547a803986bd281a67, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1894731181}
   m_SourcePrefab: {fileID: 100100000, guid: d88f0dd509b67f547a803986bd281a67, type: 3}
 --- !u!1 &1894731180 stripped
@@ -1266,23 +1218,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.08379571, y: 0.16760343, z: 0.05499998}
   m_Center: {x: -0.035, y: 0.000000024437904, z: 0.038653485}
---- !u!114 &1894731182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1894731180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 496a8b6f996df1d45b31df851264e418, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MesaDialogo
-  ConversaEstagio: 0
-  ConversaDialogo: 
-  FimConversa: 1
-  NomeFalador: 
-  Tocou: 0
 --- !u!1 &1958337119
 GameObject:
   m_ObjectHideFlags: 0

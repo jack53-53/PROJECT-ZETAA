@@ -15,6 +15,7 @@ public class DATASCRIPT : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+        Cursor.lockState = CursorLockMode.Locked;
         //Musica.loop = true;
         //Musica.Play();
     }

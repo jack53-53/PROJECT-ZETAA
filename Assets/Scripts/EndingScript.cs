@@ -11,7 +11,7 @@ public class EndingScript : MonoBehaviour
         Cooldown -= Time.fixedDeltaTime;
         if( Cooldown < 0)
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

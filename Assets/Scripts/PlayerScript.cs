@@ -63,7 +63,7 @@ public class PlayerScript : MonoBehaviour
         Mvel = Vel;
         Msens = Sens;
         //DicaTxt.text = "";
-        if(SceneManager.GetActiveScene().name == "Introducao")
+        if(SceneManager.GetActiveScene().name == "Introducao" || SceneManager.GetActiveScene().name == "Final")
         {
             Interagiu = true;
         }
