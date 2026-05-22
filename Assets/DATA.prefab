@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f311860426a05438d7d5ef1688ef36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  SensSaved: 0
-  SoundSaved: 0
+  SensSaved: 1
+  SoundSaved: 1
+  TextoDicas: 
+  AnimGO: {fileID: 0}

@@ -38,6 +38,7 @@ public class PlayerScript : MonoBehaviour
     public Image img;
     public TextMeshProUGUI TextoDicas;
     public Animator TransitionAnim;
+    public Image ImagemTexto;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -81,6 +82,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (Conversando)
         {
+            ImagemTexto.enabled = true;
             Vel = 0;
             Sens = 0;
             fs = gb.GetComponent<FaladorScript>();
@@ -97,6 +99,7 @@ public class PlayerScript : MonoBehaviour
                 Conversando = false;
                 txt.text = "";
                 NomeFalador.text = "";
+                ImagemTexto.enabled = false;
             }
         }
         else //pode dar muito errado

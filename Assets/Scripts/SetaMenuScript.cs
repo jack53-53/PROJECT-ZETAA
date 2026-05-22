@@ -38,10 +38,10 @@ public class SetaMenuScript : MonoBehaviour
             switch (m.Opcao)
             {
                 case 0:
-                    rt.anchoredPosition = new Vector3(-245, -157, 0);
+                    rt.anchoredPosition = new Vector3(-262, 83, 0);
                     break;
                 case 1:
-                    rt.anchoredPosition = new Vector3(-245, -352, 0);
+                    rt.anchoredPosition = new Vector3(-163, -95, 0);
                     break;
 
             }
@@ -51,13 +51,13 @@ public class SetaMenuScript : MonoBehaviour
             switch (ms.Opcao) //NAO FUNCIONAAAA
             {
                 case 2:
-                    rt.anchoredPosition = new Vector3(-149, 209, 0);
+                    rt.anchoredPosition = new Vector3(-176, 388, 0);
                     break;
                 case 1:
-                    rt.anchoredPosition = new Vector3(-149, -47, 0);
+                    rt.anchoredPosition = new Vector3(-407, 182, 0);
                     break;
                 case 0:
-                    rt.anchoredPosition = new Vector3(-149, -289, 0);
+                    rt.anchoredPosition = new Vector3(-70, -25, 0);
                     break;
             }
         }
