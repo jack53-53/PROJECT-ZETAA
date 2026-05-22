@@ -365,8 +365,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntroductionDIalog
   ConversaEstagio: 0
   ConversaDialogo: 
-  FimConversa: 3
+  FimConversa: 10
   NomeFalador: 
+  Tocou: 0
 --- !u!65 &250964763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -642,14 +643,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4f60f9f48d065eb4291964628f9e9d3d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

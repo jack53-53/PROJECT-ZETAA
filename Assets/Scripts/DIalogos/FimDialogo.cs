@@ -8,38 +8,28 @@ public class FimDialogo : FaladorScript
         switch (ConversaEstagio)
         {
             case 0:
-                NomeFalador = "Detective S.C: ";
-                ConversaDialogo = "Onde é que o senhor ia tão apressado?";
+                NomeFalador = "";
+                ConversaDialogo = "Depois de reúnir as pistas percebi tudo...";
                 break;
             case 1:
-                NomeFalador = "Mr.Man:";
-                ConversaDialogo = "Reunião importante.";
+                ConversaDialogo = "Com o descuido de Lady Donna o gato fugiu";
                 break;
             case 2:
-                NomeFalador = "Detective S.C: ";
-                ConversaDialogo = "Com o que trabalha?";
+                ConversaDialogo = "Com a pressa de Crystal o gato assustou-se";
                 break;
             case 3:
-                NomeFalador = "Mr.Man: ";
-                ConversaDialogo = "Negócios";
+                ConversaDialogo = "Com o spray tóxico do derp o gato ficou tonto";
                 break;
             case 4:
-                NomeFalador = "Detective S.C: ";
-                ConversaDialogo = "E por acaso reparou no vermelho na sua maleta?";
+                ConversaDialogo = "E ao bater na maleta de Mr Man, atordoado, foi contra um móvel";
                 break;
             case 5:
-                NomeFalador = "Mr.Man: ";
-                ConversaDialogo = "Vermelho? Eu só vi verde. Como a minha gravata.";
+                ConversaDialogo = "Pouco tempo depois o tijolo caiu de dentro do vaso e bateu-lhe na cabeça";
                 break;
             case 6:
-                NomeFalador = "Detective S.C.:";
-                ConversaDialogo = "Uh...";
+                ConversaDialogo = "EUREKA! SÃO TODOS CULPADOS.";
                 break;
             case 7:
-                NomeFalador = "Mr.Man: ";
-                ConversaDialogo = "Já acabou? Tenho negócios para tratar.";
-                break;
-            case 8:
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 break;
         }

@@ -11,6 +11,9 @@ using UnityEngine.UI;
 public class PlayerScript : MonoBehaviour
 {
 
+    //para quem esta vendo esse codigo no futuro, boa sorte.
+    //22/05/2026
+
     private Vector2 Movement;
     private Vector2 Olhamento;
     private Rigidbody rb;
@@ -48,8 +51,11 @@ public class PlayerScript : MonoBehaviour
         if (go != null)
         {
             ds = go.GetComponent<DATASCRIPT>();
-            Sens = ds.SensSaved;
-            Volume = ds.SoundSaved;
+            if(ds.SensSaved != 0 && ds.SoundSaved  != 0)//failsafe
+            {
+                Sens = ds.SensSaved;
+                Volume = ds.SoundSaved;
+            }
         }
         rb = GetComponent<Rigidbody>();
         LayerInteractables = LayerMask.GetMask("Interagivel");
@@ -61,8 +67,8 @@ public class PlayerScript : MonoBehaviour
         {
             Interagiu = true;
         }
-        AS = GetComponent<AudioSource>();
-        AS.Play();
+        //AS = GetComponent<AudioSource>();
+        //AS.Play();
     }
 
     private void FixedUpdate()
