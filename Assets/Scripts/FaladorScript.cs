@@ -10,9 +10,9 @@ public class FaladorScript : MonoBehaviour
     public string ConversaDialogo;
     public int FimConversa;
     public string NomeFalador;
-    private PlayerScript ps;
-    private GameObject p;
-    public bool Tocou;
+    //private PlayerScript ps;
+    //private GameObject p;
+    //public bool Tocou;
 
     // public GameObject Pai;
 

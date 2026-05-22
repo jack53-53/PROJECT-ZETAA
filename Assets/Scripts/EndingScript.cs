@@ -8,10 +8,14 @@ public class EndingScript : MonoBehaviour
 
     private void Update()
     {
-        Cooldown -= Time.fixedDeltaTime;
         if( Cooldown < 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+    }
+
+    private void FixedUpdate()
+    {
+        Cooldown -= Time.fixedDeltaTime;
     }
 }

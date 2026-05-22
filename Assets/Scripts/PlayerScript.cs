@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Threading;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -47,6 +43,7 @@ public class PlayerScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         go = GameObject.FindGameObjectWithTag("DATA");
         if (go != null)
         {
@@ -95,7 +92,7 @@ public class PlayerScript : MonoBehaviour
             Vel = 0;
             Sens = 0;
             fs = gb.GetComponent<FaladorScript>();
-            fs.Tocou = false;
+            //fs.Tocou = false;
             txt.text = fs.ConversaDialogo;
             NomeFalador.text = fs.NomeFalador;
             //Debug.Log("estagio da conversa: "+fs.ConversaEstagio);

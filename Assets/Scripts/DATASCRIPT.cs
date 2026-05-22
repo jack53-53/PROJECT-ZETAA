@@ -1,4 +1,3 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,7 +6,6 @@ public class DATASCRIPT : MonoBehaviour
     public float SensSaved;
     public float SoundSaved;
     public string TextoDicas;
-    public Image Anim;
     public GameObject AnimGO;
 
     //public AudioSource Musica;
@@ -15,7 +13,6 @@ public class DATASCRIPT : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-        Cursor.lockState = CursorLockMode.Locked;
         //Musica.loop = true;
         //Musica.Play();
     }
