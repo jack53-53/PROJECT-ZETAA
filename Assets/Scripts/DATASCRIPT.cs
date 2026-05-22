@@ -9,9 +9,13 @@ public class DATASCRIPT : MonoBehaviour
     public string TextoDicas;
     public Image Anim;
     public GameObject AnimGO;
+
+    //public AudioSource Musica;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+        //Musica.loop = true;
+        //Musica.Play();
     }
 }

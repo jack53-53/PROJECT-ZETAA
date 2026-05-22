@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class FaladorScript : MonoBehaviour
@@ -11,6 +12,7 @@ public class FaladorScript : MonoBehaviour
     public string NomeFalador;
     private PlayerScript ps;
     private GameObject p;
+    public bool Tocou;
 
     // public GameObject Pai;
 

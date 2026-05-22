@@ -39,6 +39,7 @@ public class PlayerScript : MonoBehaviour
     public TextMeshProUGUI TextoDicas;
     public Animator TransitionAnim;
     public Image ImagemTexto;
+    public AudioSource AS;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -60,6 +61,8 @@ public class PlayerScript : MonoBehaviour
         {
             Interagiu = true;
         }
+        AS = GetComponent<AudioSource>();
+        AS.Play();
     }
 
     private void FixedUpdate()
@@ -86,11 +89,13 @@ public class PlayerScript : MonoBehaviour
             Vel = 0;
             Sens = 0;
             fs = gb.GetComponent<FaladorScript>();
+            fs.Tocou = false;
             txt.text = fs.ConversaDialogo;
             NomeFalador.text = fs.NomeFalador;
             //Debug.Log("estagio da conversa: "+fs.ConversaEstagio);
             if (Interagiu)
             {
+                
                 fs.ConversaEstagio++;
                 Interagiu = false;
             }

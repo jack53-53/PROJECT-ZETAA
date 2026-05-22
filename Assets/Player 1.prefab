@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8168183067243399687}
   - component: {fileID: 5180226594435917925}
   - component: {fileID: 7577444429743662559}
-  - component: {fileID: 4307386621700711676}
   m_Layer: 2
   m_Name: Player 1
   m_TagString: Player
@@ -144,6 +143,7 @@ MonoBehaviour:
   TextoDicas: {fileID: 2603419284105861641}
   TransitionAnim: {fileID: 8404987245567689580}
   ImagemTexto: {fileID: 8075293095049655113}
+  AS: {fileID: 0}
 --- !u!114 &5180226594435917925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,14 +201,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!81 &4307386621700711676
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367990446148296890}
-  m_Enabled: 1
 --- !u!1 &1008178509879616921
 GameObject:
   m_ObjectHideFlags: 0
